@@ -4,7 +4,7 @@
 #%%global shortcommit %%(c=%%{commit}; echo ${c:0:7})
 
 Name: libtraceevent
-Version: 1.1.1
+Version: 1.2.1
 Release: 1%{?dist}
 License: LGPLv2+ and GPLv2+
 Summary: Library to parse raw trace event formats
@@ -64,6 +64,9 @@ rm -rf %{buildroot}/%{_libdir}/libtraceevent.a
 %{_libdir}/pkgconfig/libtraceevent.pc
 
 %changelog
+* Mon Apr 19 2021 Zamir SUN <sztsian@gmail.com> - 1.2.1-1
+- Update to 1.2.1
+
 * Mon Feb 08 2021 Zamir SUN <sztsian@gmail.com> - 1.1.1-1
 - Update to 1.1.1
 
