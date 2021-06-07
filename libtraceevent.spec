@@ -5,7 +5,7 @@
 
 Name: libtraceevent
 Version: 1.2.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: LGPLv2+ and GPLv2+
 Summary: Library to parse raw trace event formats
 
@@ -19,8 +19,6 @@ Source0: https://git.kernel.org/pub/scm/libs/libtrace/libtraceevent.git/snapshot
 BuildRequires:  gcc
 BuildRequires: xmlto
 BuildRequires: asciidoc
-# The libtraceevent is meant to be used by perf, trace-cmd etc. in the future, before it's ready in perf, let's add a conflict
-Conflicts: perf
 
 %global __provides_exclude_from ^%{_libdir}/traceevent/plugins
 
@@ -64,6 +62,9 @@ rm -rf %{buildroot}/%{_libdir}/libtraceevent.a
 %{_libdir}/pkgconfig/libtraceevent.pc
 
 %changelog
+* Mon Jun 07 2021 Justin Forbes <jforbes@fedoraproject.org>
+- Remove erroneus "Conflicts: perf" which broke perf.
+
 * Mon Apr 19 2021 Zamir SUN <sztsian@gmail.com> - 1.2.1-1
 - Update to 1.2.1
 
