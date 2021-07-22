@@ -5,7 +5,7 @@
 
 Name: libtraceevent
 Version: 1.2.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: LGPLv2+ and GPLv2+
 Summary: Library to parse raw trace event formats
 
@@ -62,6 +62,9 @@ rm -rf %{buildroot}/%{_libdir}/libtraceevent.a
 %{_libdir}/pkgconfig/libtraceevent.pc
 
 %changelog
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Mon Jun 07 2021 Justin Forbes <jforbes@fedoraproject.org>
 - Remove erroneus "Conflicts: perf" which broke perf.
 
